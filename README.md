@@ -1,16 +1,26 @@
-# React + Vite
+# EMS-Full-Stack
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A full-stack Employee Management System built with Spring Boot (backend) and React (frontend), supporting full CRUD operations on employee records.
 
-Currently, two official plugins are available:
+# Tech Stack
+Backend: Java 17, Spring Boot, Spring Data JPA, MySQL, Lombok
+Frontend: React 19, Vite, Axios, Bootstrap 5, React Router DOM
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+# Features
+Create, Read, Update & Delete employee records
+RESTful API with clean architecture (DTOs, Services, Repositories)
+Responsive UI with Bootstrap
+MySQL persistence via JPA/Hibernate
+Custom exception handling
 
-## React Compiler
+# Quick Start
+bash
+# Backend
+cd ems-backend/ems-backend
+mvn spring-boot:run        # http://localhost:8080
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+# Frontend
+cd ems-frontend
+npm install && npm run dev  # http://localhost:5173
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+> ⚠️ **Note:** Configure your MySQL credentials in `application.properties` and create the `ems` database before running.
